@@ -23,7 +23,7 @@ func main() {
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:   "server",
-			Value:  "http://lgtm.co",
+			Value:  "https://lgtm.co",
 			Usage:  "lgtm server address",
 			EnvVar: "LGTM_SERVER",
 		},
