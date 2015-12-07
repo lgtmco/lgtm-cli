@@ -24,6 +24,6 @@ func delCmd(c *cli.Context, client lgtm.Client) error {
 	if err != nil {
 		return fmt.Errorf("error de-activating repository. %s", err)
 	}
-	fmt.Println("successfully de-activated %s", repo)
+	fmt.Printf("successfully de-activated %s\n", repo)
 	return nil
 }

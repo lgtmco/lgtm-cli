@@ -20,6 +20,6 @@ func addCmd(c *cli.Context, client lgtm.Client) error {
 	if err != nil {
 		return err
 	}
-	fmt.Println("successfully activated %s", repo.Slug)
+	fmt.Printf("successfully activated %s\n", repo.Slug)
 	return nil
 }
