@@ -36,16 +36,23 @@ func listCmd(c *cli.Context, client lgtm.Client) error {
 		inactive = c.Bool("inactive")
 		exclude  = c.String("exclude")
 	)
+	if inactive {
+		active = false
+	}
 	repos, err := client.Repos()
 	if err != nil {
 		return err
 	}
 	for _, repo := range repos {
 		match, _ := path.Match(exclude, repo.Slug)
+		if len(exclude) != 0 && !match {
+			continue
+		}
+
 		switch {
-		case !match && active && repo.ID != 0:
+		case active && repo.ID != 0:
 			fmt.Println(repo.Slug)
-		case !match && inactive && repo.ID == 0:
+		case inactive && repo.ID == 0:
 			fmt.Println(repo.Slug)
 		}
 	}
