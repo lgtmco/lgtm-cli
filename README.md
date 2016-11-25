@@ -20,3 +20,7 @@ Download and install the binary:
 curl https://github.com/lgtmco/lgtm-cli/releases/download/v1.0.0/lgtm_darwin_amd64.tar.gz | tar zx
 sudo cp lgtm /usr/local/bin
 ```
+
+### Disclaimer
+
+LGTM is a trademark of Semmle, Ltd (www.lgtm.com). The use of the LGTM mark and name on this page shall not imply any affiliation with or endorsement by Semmle, Ltd.
